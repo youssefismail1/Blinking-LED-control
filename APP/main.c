@@ -106,26 +106,7 @@ void GPIOF_Handler (void)
 			}
 		}
 	  }
-		flag=0;
-		while(flag==0)
-		{
-		if((GPIOF_DATA & 0x01)==0)
-		{
-		  Delay(DELAY_DEBOUNCE);
-		  if((GPIOF_DATA & 0x01)==0)
-		   {
-		    OFF_Ticks++;
-		    if((GPIOF_DATA & 0x10)==0)
-			  { 
-					Delay(DELAY_DEBOUNCE);
-				  if((GPIOF_DATA & 0x10)==0)
-				  {
-						flag=1;
-				  }
-		    }
-			}
-		}
-	  }
+	OFF_Ticks=10-ON_Ticks;
 	  Set_Bit(GPIOF_ICR,0);
 	  
 }	
