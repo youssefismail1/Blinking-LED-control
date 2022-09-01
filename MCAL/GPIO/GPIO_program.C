@@ -2,6 +2,7 @@
 # include "MACROS.h"
 # include "STD_TYPES.h"
 # include "GPIO_Interface.h"
+# include "GPIO_Private.h"
 void GPIO_SetPinDirection(u8 PortNUM,u8 PinNUM,u8 Direction)
 {
 	switch(PortNUM)
@@ -70,7 +71,7 @@ void GPIO_SetPinDirection(u8 PortNUM,u8 PinNUM,u8 Direction)
 }
 void GPIO_SetPinValue(u8 PortNUM, u8 PinNUM, u8 PinValue)
 {
-	switch(PortNMU)
+	switch(PortNUM)
 	{
 		case GPIO_PortA:
 		if(PinValue==STD_HIGH)
@@ -79,7 +80,7 @@ void GPIO_SetPinValue(u8 PortNUM, u8 PinNUM, u8 PinValue)
 		}
 		else
 		{
-			Clear_Bit(GPIOA_DATA,PinNUM)
+			Clear_Bit(GPIOA_DATA,PinNUM);
 		}
 		case GPIO_PortB:
 		if(PinValue==STD_HIGH)
@@ -88,7 +89,7 @@ void GPIO_SetPinValue(u8 PortNUM, u8 PinNUM, u8 PinValue)
 		}
 		else
 		{
-			Clear_Bit(GPIOB_DATA,PinNUM)
+			Clear_Bit(GPIOB_DATA,PinNUM);
 		}
 		case GPIO_PortC:
 		if(PinValue==STD_HIGH)
@@ -97,7 +98,7 @@ void GPIO_SetPinValue(u8 PortNUM, u8 PinNUM, u8 PinValue)
 		}
 		else
 		{
-			Clear_Bit(GPIOC_DATA,PinNUM)
+			Clear_Bit(GPIOC_DATA,PinNUM);
 		}
 		case GPIO_PortD:
 		if(PinValue==STD_HIGH)
@@ -106,7 +107,7 @@ void GPIO_SetPinValue(u8 PortNUM, u8 PinNUM, u8 PinValue)
 		}
 		else
 		{
-			Clear_Bit(GPIOD_DATA,PinNUM)
+			Clear_Bit(GPIOD_DATA,PinNUM);
 		}
 		case GPIO_PortE:
 		if(PinValue==STD_HIGH)
@@ -115,7 +116,7 @@ void GPIO_SetPinValue(u8 PortNUM, u8 PinNUM, u8 PinValue)
 		}
 		else
 		{
-			Clear_Bit(GPIOE_DATA,PinNUM)
+			Clear_Bit(GPIOE_DATA,PinNUM);
 		}
 		case GPIO_PortF:
 		if(PinValue==STD_HIGH)
@@ -124,7 +125,7 @@ void GPIO_SetPinValue(u8 PortNUM, u8 PinNUM, u8 PinValue)
 		}
 		else
 		{
-			Clear_Bit(GPIOF_DATA,PinNUM)
+			Clear_Bit(GPIOF_DATA,PinNUM);
 		}
 	}
 }

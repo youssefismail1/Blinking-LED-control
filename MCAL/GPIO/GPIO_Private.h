@@ -1,6 +1,6 @@
 #ifndef GPIO_PRIVATE_
 #define GPIO_PRIVATE_
-
+#include"STD_TYPES.h"
 /* GPIOA */
 #define GPIOA_DATA   *((volatile u32*)0x40058000)
 #define GPIOA_DIR    *((volatile u32*)0x40058400)
@@ -41,7 +41,7 @@
 
 /* GPIOB */ 
 
-#define GPIOB_DATA   *((volatile u32*)0x0x40059000)
+#define GPIOB_DATA   *((volatile u32*)0x40059000)
 #define GPIOB_DIR    *((volatile u32*)0x40059400)
 #define GPIOB_IS   *((volatile u32*)0x40059404)
 #define GPIOB_IBE   *((volatile u32*)0x40059408)
@@ -82,7 +82,7 @@
 
 /* GPIOC */ 
 
-#define GPIOC_DATA   *((volatile u32*)0x0x4005A000)
+#define GPIOC_DATA   *((volatile u32*)0x4005A000)
 #define GPIOC_DIR    *((volatile u32*)0x4005A400)
 #define GPIOC_IS   *((volatile u32*)0x4005A404)
 #define GPIOC_IBE   *((volatile u32*)0x4005A408)
@@ -121,7 +121,7 @@
 
 /* GPIOD */ 
 
-#define GPIOD_DATA   *((volatile u32*)0x0x4005B000)
+#define GPIOD_DATA   *((volatile u32*)0x4005B000)
 #define GPIOD_DIR    *((volatile u32*)0x4005B400)
 #define GPIOD_IS   *((volatile u32*)0x4005B404)
 #define GPIOD_IBE   *((volatile u32*)0x4005B408)
@@ -160,7 +160,7 @@
 
 /* GPIOE */ 
 
-#define GPIOE_DATA   *((volatile u32*)0x0x4005C000)
+#define GPIOE_DATA   *((volatile u32*)0x4005C000)
 #define GPIOE_DIR    *((volatile u32*)0x4005C400)
 #define GPIOE_IS   *((volatile u32*)0x4005C404)
 #define GPIOE_IBE   *((volatile u32*)0x4005C408)
